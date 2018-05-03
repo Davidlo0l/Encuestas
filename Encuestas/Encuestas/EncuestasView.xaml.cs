@@ -15,6 +15,12 @@ namespace Encuestas
 		public EncuestasView ()
 		{
 			InitializeComponent ();
+            btnMas.Clicked += BtnMas_Clicked;
 		}
-	}
+
+        private async void BtnMas_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetallesEncuestasView());
+        }
+    }
 }
