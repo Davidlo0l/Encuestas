@@ -2,9 +2,14 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Encuestas.App">
-	<Application.Resources>
-
-		<!-- Application resource dictionary -->
-
-	</Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style>
+                <Setter TargetType="Button" x:Key="btnMas"/>
+                <setter Property="BackGround" Value="Green"/>
+                <Setter PropertyCondition="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
