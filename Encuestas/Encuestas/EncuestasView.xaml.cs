@@ -16,6 +16,15 @@ namespace Encuestas
 		{
 			InitializeComponent ();
             btnMas.Clicked += BtnMas_Clicked;
+            MessagingCenter.Subscribe<ContentPage,
+            Encuesta>(this, Mensajes.EncuestaCompleta, (sender, args)
+            =>
+            {
+                Panel.Children.Add(new Label()
+                {
+                    Text = args.ToString()
+                });
+            });
 		}
 
         private async void BtnMas_Clicked(object sender, EventArgs e)
